@@ -1,0 +1,40 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+
+.contenedorContacto{
+    @include centrar-elementos-col;
+    @include anchoAlto(100%,auto);
+    .cabeceraContacto{
+        @include flex-spaceBet-row;
+        @include anchoAlto(50%,auto);
+        margin-top: -20px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        .telefonoContacto{
+            @include flex-row-center;
+            gap: 10px;
+            svg{
+                @include anchoAlto(30px,30px);
+            }
+        }
+        .telegramContacto{
+            @include flex-row-center;
+            gap: 10px;
+            svg{
+                @include anchoAlto(30px,30px);
+            }
+        }
+
+    }
+    .mapaContacto{
+        margin-bottom: 40px;
+        img{
+            border-radius: 30px;
+            border: 5px $negro solid;
+        }
+
+
+    }
+
+}

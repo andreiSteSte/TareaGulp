@@ -1,0 +1,113 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+
+.header{
+    @include flex-column;
+    width: auto;
+    height: añadeTamaño($altoHeader);
+
+    .contactos{
+        @include anchoAlto(auto,añadeTamaño($altoContactos));
+        @include flex-spaceBet-row;
+        background-color: $colorPrimario;
+        .personalizacion{
+            @include flex-row-center;
+            margin-left:añadeTamaño($margenContactos);
+            .registro{
+                margin: añadeTamaño($margenContactosInterno);
+                a{
+                    text-decoration: none;
+                    color: $negro;
+                }
+                svg{
+                    @include anchoAlto (añadeTamaño($tamañoSVG),añadeTamaño($tamañoSVG))
+                }
+            }
+            .idioma{
+                svg{
+                    @include anchoAlto (añadeTamaño($tamañoSVG),añadeTamaño($tamañoSVG))
+                }
+            }
+        }
+        .redesSociales{
+            @include flex-row-center;
+            margin-right: añadeTamaño($margenContactos);
+            svg{
+                margin: añadeTamaño($margenContactosInterno);
+                @include anchoAlto (añadeTamaño($tamañoSVG),añadeTamaño($tamañoSVG))
+            }
+        }
+    }
+    .busqueda{
+        @include anchoAlto(auto,añadeTamaño($altoBusqueda));
+        @include flex-spaceEven-row;
+        background-color: $colorSecundario;
+        .logo{
+            @include anchoAlto(añadeTamaño($altoLogo),auto);
+            margin-right: añadeTamaño($margenContactos);
+            img{
+                @include anchoAlto(añadeTamaño($altoLogo),añadeTamaño($altoLogo));
+            }
+        }
+        form{
+            @include anchoAlto(añadeTamaño($anchoBuscador),auto);
+            position: relative;
+            input{
+                @include anchoAlto(añadeTamaño($anchoBuscador), auto);
+                padding: 12px 20px;
+                margin: 8px 0;
+                border: 1px solid $colorBusqueda;
+                border-radius: añadeTamaño($radioBusqueda);
+              }
+                input[type="text"]:focus {
+                border: 1px solid $colorBusquedaFocus;
+              }
+              svg{
+                position: absolute;
+                left: 420px;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+            
+            }
+            .carrito{
+                background-color: $colorBlanco;
+                @include anchoAlto(añadeTamaño($anchoCompra),añadeTamaño($altoBuscadores));
+                border-radius: añadeTamaño($radioBusqueda);
+                border: 1px solid $colorBusqueda;
+                @include flex-center;
+                svg{
+                    @include anchoAlto (añadeTamaño($tamañoSVG),añadeTamaño($tamañoSVG));
+                    margin-left: 15px;
+                  }
+                  
+            }
+        }
+   
+    }
+    .menuBusqueda{
+        @include anchoAlto(auto,añadeTamaño($altoNav));
+        @include flex-spaceEven-row;
+        background-color: $colorPrimario;
+        list-style: none;
+        li {
+            a {
+              text-decoration: none;
+              color: $colorFooter;
+              font-size: añadeTamaño($tamañoLetraMenuNormal);
+              &:hover {
+                  @include add-text-shadow (5px, 5px, 5px, rgba(0, 0, 0, 0.472));
+                  color: $negro;
+                  font-size: añadeTamaño($tamañoLetraMenuNormal);
+              }
+            }
+          }
+    }
+    .banner{
+        @include anchoAlto(auto,añadeTamaño($altoBanner));
+        img{
+         @include anchoAlto(100%,100%);
+         object-fit: cover;
+        }
+    }

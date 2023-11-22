@@ -1,0 +1,30 @@
+{
+  "name": "tareagulp",
+  "version": "1.0.0",
+  "description": "Tarea Alejandro",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreiSteSte/TareaGulp.git"
+  },
+  "author": "Andrei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreiSteSte/TareaGulp/issues"
+  },
+  "homepage": "https://github.com/andreiSteSte/TareaGulp#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-git": "^2.10.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0"
+  },
+  "dependencies": {
+    "sass": "^1.69.5"
+  }
+}

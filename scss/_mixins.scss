@@ -1,0 +1,68 @@
+@mixin general{
+    margin: añadeTamaño(0);
+    padding: añadeTamaño(0);
+    box-sizing: border-box;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+  
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+@mixin flex-center-column {
+    @include flex-center;
+    flex-direction: column;
+}
+@mixin flex-center-row {
+    @include flex-center;
+    flex-direction: row;
+}
+  
+@mixin flex-spaceEven-row{
+    @include flex-row;
+    justify-content: space-evenly;
+    align-items: center
+
+}
+@mixin flex-spaceBet-row{
+    @include flex-row;
+    justify-content:space-between
+
+}
+
+@mixin anchoAlto($width, $height:auto) {
+    width: $width;
+    height: $height;
+  }
+
+@mixin flex-row-center{
+    @include flex-row;
+    align-items: center
+    
+}
+@mixin add-text-shadow($x: 2, $y: 5px, $blur: 4px, $color: rgba(0, 0, 0, 0.1)) {
+    text-shadow: $x $y $blur $color;
+  }
+
+  @mixin centrar-elementos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @mixin centrar-elementos-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }

@@ -1,0 +1,16 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+
+*{
+    @include general; 
+    font-family: 'Kavivanar', cursive;
+}
+
+@import "header";
+
+@import "_páginaPrincipal";
+
+@import "panaderia";
+@import "contacto";
+@import "footer";

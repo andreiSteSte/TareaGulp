@@ -1,0 +1,21 @@
+<LibroXML>
+    <Libro>
+      <Titulo>El Señor de los Anillos</Titulo>
+      <Autor>J.R.R. Tolkien</Autor>
+      <Publicacion>
+        <Anio>1954</Anio>
+        <Mes>Diciembre</Mes>
+      </Publicacion>
+      <Genero>Fantasía</Genero>
+    </Libro>
+    
+    <Libro>
+      <Titulo>Cien años de soledad</Titulo>
+      <Autor>Gabriel García Márquez</Autor>
+      <Publicacion>
+        <Anio>1967</Anio>
+        <Mes>Mayo</Mes>
+      </Publicacion>
+      <Genero>Realismo mágico</Genero>
+    </Libro>
+  </LibroXML>

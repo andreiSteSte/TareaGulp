@@ -1,0 +1,15 @@
+@function añadeTamaño($tamaño){
+    @return $tamaño+px;
+}
+
+@function box-shadow($x: 0, $y: 2px, $blur: 4px, $color: rgba(0, 0, 0, 0.5)) {
+    @return $x+px $y+px $blur+px $color;
+  }
+
+  @function box-shadow2($x: 0, $y: 2px, $blur: 4px, $color: rgba(222, 122, 15, 0.5)) {
+    @return $x+px $y+px $blur+px $color;
+  }
+
+@function dividirAnchuraPor2($anchura) {
+    @return $anchura / 2;
+}

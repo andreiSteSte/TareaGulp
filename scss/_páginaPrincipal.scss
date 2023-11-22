@@ -1,0 +1,171 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+
+body {
+  background-image: url(../images/fondo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  @include anchoAlto(auto,100%);
+  font-family: 'Kavivanar', cursive;
+}
+.contenedorPagina{
+  @include anchoAlto(auto,100%);
+  
+  }
+
+.masVendidos {
+  @include flex-center-column;
+  @include anchoAlto(auto, 700px);
+
+  .cabeceraMasVendidos {
+    @include flex-center-row;
+    @include anchoAlto(auto, auto);
+
+    h1 {
+      font-size: añadeTamaño($tamañoTitulos);
+      @include anchoAlto(auto, auto);
+      color: $colorTitulos;
+      @include centrar-elementos;
+    }
+
+    .circulo1 {
+      width: añadeTamaño($tamañoC1);
+      height: añadeTamaño($tamañoC1);
+      background-color: $colorCirculos;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+
+    .circulo2 {
+      width: añadeTamaño($tamañoC2);
+      height: añadeTamaño($tamañoC2);
+      background-color: $colorCirculos;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+
+    .circulo3 {
+      width: añadeTamaño($tamañoC3);
+      height: añadeTamaño($tamañoC3);
+      background-color: $colorCirculos;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+  }
+
+  .carrusel {
+    @include anchoAlto(auto, añadeTamaño($altoMasVendidos));
+    @include flex-row;
+    @include centrar-elementos;
+    margin-top: 40px;
+    gap: añadeTamaño($gapTarjetas);
+
+    .tarjeta {
+      @include anchoAlto(añadeTamaño($anchoTarjeta), añadeTamaño($altoTarjeta));
+      @include centrar-elementos-col;
+      background-color: $colorTarjetasPrincipales;
+      border-radius: añadeTamaño($borderRadius);
+      gap: añadeTamaño($gapTarjetasINTR);
+      box-shadow: box-shadow(8, 10, 10);
+
+      img {
+        @include anchoAlto(añadeTamaño($anchoFotoCar), añadeTamaño($altoFotoCar));
+        border-radius: añadeTamaño($borderRadius);
+      }
+
+      .desc {
+        @include anchoAlto(200px);
+        text-align: center;
+      }
+
+      input {
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        @include anchoAlto(añadeTamaño($anchoBoton), añadeTamaño($altoBoton));
+        border-radius: añadeTamaño($borderRadius);
+        background-color: $colorBotonCompra;
+        border-color: $colorBotonCompra;
+        &:hover{
+          background-color: $colorBotonCompraHover;
+          transform: scale(1.05);
+
+      }
+      }
+    }
+  }
+}
+
+.nuestraHistoria {
+  @include flex-center-column;
+  @include anchoAlto(auto, 700px);
+  margin-bottom: 40px;
+  gap: 60px;
+
+  .cabeceraNuestraHistoria {
+    @include flex-center-row;
+    @include anchoAlto(auto, auto);
+
+    h1 {
+      font-size: añadeTamaño($tamañoTitulos);
+      @include anchoAlto(auto, auto);
+      color: $colorTitulos;
+      @include centrar-elementos;
+    }
+
+    .circulo1 {
+      width: añadeTamaño($tamañoC1);
+      height: añadeTamaño($tamañoC1);
+      background-color: $colorCirculos;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+
+    .circulo2 {
+      width: añadeTamaño($tamañoC2);
+      height: añadeTamaño($tamañoC2);
+      background-color: $colorCirculos;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+
+    .circulo3 {
+      width: añadeTamaño($tamañoC3);
+      height: añadeTamaño($tamañoC3);
+      background-color: $colorCirculos;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+  }
+
+  .contenidoHistoria {
+    @include anchoAlto(añadeTamaño($anchoGeneral), auto);
+    @include flex-row;
+    @include centrar-elementos;
+    gap: 80px;
+    .imagenHistoria {
+      @include anchoAlto(dividrAnchuraPor2($anchoGeneral),auto);
+      img {
+        @include anchoAlto(650px, 400px);
+      }
+    }
+
+    .historia {
+      @include flex-center-column;
+      @include anchoAlto(470px  ,auto);
+      gap: 40px;
+
+      h2{
+        font-size: 40px;
+      }
+      h3{
+        font-size: 30px;
+      }
+      p{
+        font-size: 20px;
+      }
+    }
+  }
+
+
+}

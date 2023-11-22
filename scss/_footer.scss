@@ -1,0 +1,49 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+
+
+
+.footer{
+    @include flex-spaceBet-row;
+    background-color: $colorFooter;
+    width: auto;
+    height: añadeTamaño($altoFooter);
+    color: $colorBlanco;
+    padding-top: añadeTamaño($paddingFooter);
+}
+
+.descripcionFooter{
+    @include anchoAlto(añadeTamaño($anchoDescripcionFooter),auto);
+    p{
+        padding: añadeTamaño($paddingFooter);
+    }
+    
+}
+.localizacion{
+    svg{
+        @include anchoAlto(añadeTamaño($tamañoSVGfooter),añadeTamaño($tamañoSVGfooter));
+        color: $negro;
+    }
+}
+
+.contacto{
+    padding: añadeTamaño($paddingFooter);
+    @include flex-center-column;
+    .logo{
+        @include anchoAlto(añadeTamaño($altoLogo),auto);
+        margin-right: añadeTamaño($margenContactos);
+        img{
+            @include anchoAlto(añadeTamaño($altoLogo),añadeTamaño($altoLogo));
+            margin-left: 20px;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: $colorBlanco;
+        &:hover {
+            @include add-text-shadow (5px, 5px, 5px, rgba(0, 0, 0, 0.472));
+            color: $negro;
+        }
+    }
+}

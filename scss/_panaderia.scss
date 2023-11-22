@@ -1,0 +1,89 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+
+    .contenedorventas {
+        @include anchoAlto(auto,auto);
+        @include flex-column;
+        margin-bottom: 50px;
+        .fila1 {
+            @include flex-spaceBet-row;
+            margin-left:40px;
+            margin-right:40px;
+            .tarjetaVenta {
+                transition: transform 0.3s ease-in-out;
+                @include anchoAlto(añadeTamaño($anchoTarjeta), añadeTamaño($altoTarjeta2));
+                @include centrar-elementos-col;
+                border-radius: añadeTamaño($borderRadius);
+                gap: 20px;
+                &:hover {
+                    transform: scale(1.05);
+                }
+              
+                img {   
+                    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+                    transition: transform 0.3s ease-in-out;
+                    @include anchoAlto(añadeTamaño($anchoFotoCar), añadeTamaño($altoFotoCar));
+                    border-radius: añadeTamaño($borderRadius);
+                    &:hover {
+                        transform: scale(1.1); 
+                    }
+                }
+
+                input {    
+                    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+                    @include anchoAlto(añadeTamaño($anchoBoton), añadeTamaño($altoBoton));
+                    border-radius: añadeTamaño($borderRadius);
+                    background-color: $colorBotonCompra;
+                    border-color: $colorBotonCompra;
+                    &:hover{
+                        background-color: $colorBotonCompraHover;
+                        transform: scale(1.05);
+
+                    }
+                }
+
+            }
+
+         
+    }
+
+    .fila2{
+        @include flex-spaceEven-row;
+        .tarjetaVenta{
+            transition: transform 0.3s ease-in-out;
+            @include anchoAlto(añadeTamaño($anchoTarjeta), añadeTamaño($altoTarjeta2));
+            @include centrar-elementos-col;
+            border-radius: añadeTamaño($borderRadius);
+            gap: añadeTamaño($gapTarjetasINTR);
+            &:hover {
+                transform: scale(1.10);
+            }
+
+
+            img {   
+                transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+                transition: transform 0.3s ease-in-out;
+                @include anchoAlto(añadeTamaño($anchoFotoCar), añadeTamaño($altoFotoCar));
+                border-radius: añadeTamaño($borderRadius);
+                &:hover {
+                    transform: scale(1.1); 
+                }
+            }
+
+
+            input {
+                transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+                @include anchoAlto(añadeTamaño($anchoBoton), añadeTamaño($altoBoton));
+                border-radius: añadeTamaño($borderRadius);
+                background-color: $colorBotonCompra;
+                border-color: $colorBotonCompra;
+                &:hover{
+                    background-color: $colorBotonCompraHover;
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+}
+}
