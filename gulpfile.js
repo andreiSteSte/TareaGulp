@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var clean = require('gulp-clean');
 var sass = require('gulp-sass')(require('sass'));
-var git = require('gulp-git');
+var git = require('simple-git');
 var cleanCSS = require('gulp-clean-css');
 
 // BORRAR LA CARPETA STYLES ANTES
@@ -25,11 +25,19 @@ gulp.task('minificarCSS', function() {
 });
 
 // SUBIR EL PROYECTO A GITHUB
-gulp.task('subirGitHub', function() {
-  return gulp.src('.')
-    .pipe(git.add())
-    .pipe(git.commit('Subir cambios'))
-});
+gulp.task('subirGitHub', function (done) {
+    git()
+      .add('.')
+      .commit('Subir cambios')
+      .push('origin', 'main', function (err) {
+        if (err) {
+          console.error(err);
+          done(err);
+        } else {
+          done();
+        }
+      });
+  });
 
 // Tarea:
 gulp.task('default', gulp.series('borrar', 'sass', 'minificarCSS', 'subirGitHub'));
