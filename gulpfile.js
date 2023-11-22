@@ -29,14 +29,7 @@ gulp.task('subirGitHub', function (done) {
     git()
       .add('.')
       .commit('Subir cambios')
-      .push('origin', 'main', function (err) {
-        if (err) {
-          console.error(err);
-          done(err);
-        } else {
-          done();
-        }
-      });
+      .push('origin', 'main');
   });
 
 // Tarea:
