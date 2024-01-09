@@ -1,68 +1,88 @@
+/// Establece los márgenes y el padding a 0 y el box-sizing a border-box
 @mixin general{
     margin: añadeTamaño(0);
     padding: añadeTamaño(0);
     box-sizing: border-box;
 }
 
+/// Establece el display a flex y la dirección de los elementos a columna
 @mixin flex-column {
     display: flex;
     flex-direction: column;
 }
+
+/// Establece el display a flex y la dirección de los elementos a fila
 @mixin flex-row {
     display: flex;
     flex-direction: row;
 }
-  
+
+/// Centra los elementos tanto horizontal como verticalmente
 @mixin flex-center {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-  
+
+/// Centra los elementos en una columna
 @mixin flex-center-column {
     @include flex-center;
     flex-direction: column;
 }
+
+/// Centra los elementos en una fila
 @mixin flex-center-row {
     @include flex-center;
     flex-direction: row;
 }
-  
+
+/// Distribuye los elementos de manera uniforme en una fila
 @mixin flex-spaceEven-row{
     @include flex-row;
     justify-content: space-evenly;
     align-items: center
-
 }
+
+/// Distribuye los elementos con espacio entre ellos en una fila
 @mixin flex-spaceBet-row{
     @include flex-row;
     justify-content:space-between
-
 }
 
+/// Establece el ancho y la altura de un elemento
+/// @param {Length} $width - El ancho del elemento
+/// @param {Length} $height - La altura del elemento
 @mixin anchoAlto($width, $height:auto) {
     width: $width;
     height: $height;
-  }
+}
 
+/// Alinea los elementos al centro en una fila
 @mixin flex-row-center{
     @include flex-row;
     align-items: center
-    
 }
+
+/// Añade una sombra de texto a un elemento
+/// @param {Length} $x - La posición horizontal de la sombra
+/// @param {Length} $y - La posición vertical de la sombra
+/// @param {Length} $blur - El desenfoque de la sombra
+/// @param {Color} $color - El color de la sombra
 @mixin add-text-shadow($x: 2, $y: 5px, $blur: 4px, $color: rgba(0, 0, 0, 0.1)) {
     text-shadow: $x $y $blur $color;
-  }
+}
 
-  @mixin centrar-elementos {
+/// Centra los elementos tanto horizontal como verticalmente
+@mixin centrar-elementos {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  @mixin centrar-elementos-col {
+/// Centra los elementos en una columna
+@mixin centrar-elementos-col {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+}
