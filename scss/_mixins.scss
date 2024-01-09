@@ -5,13 +5,13 @@
     box-sizing: border-box;
 }
 
-/// Establece el display a flex y la dirección de los elementos a columna
+/// Establece el display a flex y la dirección de los elementos a columna.
 @mixin flex-column {
     display: flex;
     flex-direction: column;
 }
 
-/// Establece el display a flex y la dirección de los elementos a fila
+/// Establece el display a flex y la dirección de los elementos a fila.
 @mixin flex-row {
     display: flex;
     flex-direction: row;
@@ -24,13 +24,13 @@
     justify-content: center;
 }
 
-/// Centra los elementos en una columna
+/// Centra los elementos en una columna.
 @mixin flex-center-column {
     @include flex-center;
     flex-direction: column;
 }
 
-/// Centra los elementos en una fila
+/// Centra los elementos en una fila.
 @mixin flex-center-row {
     @include flex-center;
     flex-direction: row;
@@ -43,14 +43,14 @@
     align-items: center
 }
 
-/// Distribuye los elementos con espacio entre ellos en una fila
+/// Distribuye los elementos con espacio entre ellos en una fila.
 @mixin flex-spaceBet-row{
     @include flex-row;
     justify-content:space-between
 }
 
 /// Establece el ancho y la altura de un elemento
-/// @param {Length} $width - El ancho del elemento
+/// @param {Length} $width - El ancho del elemento.
 /// @param {Length} $height - La altura del elemento
 @mixin anchoAlto($width, $height:auto) {
     width: $width;
