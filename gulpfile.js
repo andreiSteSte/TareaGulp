@@ -5,27 +5,27 @@ var git = require('simple-git');
 var cleanCSS = require('gulp-clean-css');
 
 // BORRAR LA CARPETA STYLES ANTES
-gulp.task('borrar', function() {
+function borrar() {
   return gulp.src('./styles/*', { read: false, allowEmpty: false })
     .pipe(clean());
-});
+};
 
 // GENERAR LAS HOJAS DE ESTILOS A PARTIR DE LOS FICHEROS .SCSS en Styles.
-gulp.task('sass', function() {
+function compilarSass() {
   return gulp.src('./scss/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('styles'));
-});
+};
 
 // LIMPIAR CSS Y CONDENSARLO
-gulp.task('minificarCSS', function() {
+function minificarCSS() {
   return gulp.src('styles/main.css')
     .pipe(cleanCSS())
     .pipe(gulp.dest('styles'));
-});
+};
 
 // SUBIR EL PROYECTO A GITHUB
-gulp.task('subirGitHub', function (done) {
+function subirGitHub(done) {
     git()
       .add('.')
       .commit('Subir cambios')
@@ -37,7 +37,11 @@ gulp.task('subirGitHub', function (done) {
           done();
         }
       });
-  });
+  };
 
 // Tarea:
-gulp.task('default', gulp.series('borrar', 'sass', 'minificarCSS', 'subirGitHub'));
+exports.borrar=borrar;
+exports.compilarSass=compilarSass;
+exports.minificarCSS=minificarCSS;
+exports.subirGitHub=subirGitHub;
+exports.default=gulp.series(borrar,compilarSass,minificarCSS,subirGitHub);
