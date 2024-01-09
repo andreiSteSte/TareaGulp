@@ -5,13 +5,13 @@
     box-sizing: border-box;
 }
 
-/// Establece el display a flex y la dirección de los elementos a columna.
+/// Establece display flex y la dirección de los elementos a columna.
 @mixin flex-column {
     display: flex;
     flex-direction: column;
 }
 
-/// Establece el display a flex y la dirección de los elementos a fila.
+/// Establece display flex y la dirección de los elementos a fila.
 @mixin flex-row {
     display: flex;
     flex-direction: row;
