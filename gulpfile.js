@@ -3,6 +3,7 @@ var clean = require('gulp-clean');
 var sass = require('gulp-sass')(require('sass'));
 var git = require('simple-git');
 var cleanCSS = require('gulp-clean-css');
+var sassdoc = require('sassdoc');
 
 // BORRAR LA CARPETA STYLES ANTES
 function borrar() {
@@ -24,6 +25,12 @@ function minificarCSS() {
     .pipe(gulp.dest('styles'));
 };
 
+// GENERAR DOCUMENTACIÓN SASS
+function generarDocs() {
+  return gulp.src('./scss/*.scss')
+    .pipe(sassdoc());
+};
+
 // SUBIR EL PROYECTO A GITHUB
 function subirGitHub(done) {
     git()
@@ -43,5 +50,6 @@ function subirGitHub(done) {
 exports.borrar=borrar;
 exports.compilarSass=compilarSass;
 exports.minificarCSS=minificarCSS;
+exports.generarDocs=generarDocs;
 exports.subirGitHub=subirGitHub;
-exports.default=gulp.series(borrar,compilarSass,minificarCSS,subirGitHub);
+exports.default=gulp.series(borrar,compilarSass,minificarCSS,generarDocs,subirGitHub);
