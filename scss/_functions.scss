@@ -1,5 +1,5 @@
 /// Añade 'px' a un número
-/// @param {Number} $tamaño - El número al que se le añadirá 'px'
+/// @param {Number} $tamaño - El numero al que se le añadirá 'px'
 /// @return {String} - El número con 'px' añadido
 @function añadeTamaño($tamaño){
   @return $tamaño+px;
