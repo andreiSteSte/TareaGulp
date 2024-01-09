@@ -1,15 +1,33 @@
+/// Añade 'px' a un número
+/// @param {Number} $tamaño - El número al que se le añadirá 'px'
+/// @return {String} - El número con 'px' añadido
 @function añadeTamaño($tamaño){
-    @return $tamaño+px;
+  @return $tamaño+px;
 }
 
+/// Genera una sombra de caja
+/// @param {Length} $x - La posición horizontal de la sombra
+/// @param {Length} $y - La posición vertical de la sombra
+/// @param {Length} $blur - El desenfoque de la sombra
+/// @param {Color} $color - El color de la sombra
+/// @return {String} - La sombra de caja generada
 @function box-shadow($x: 0, $y: 2px, $blur: 4px, $color: rgba(0, 0, 0, 0.5)) {
-    @return $x+px $y+px $blur+px $color;
-  }
+  @return $x+px $y+px $blur+px $color;
+}
 
-  @function box-shadow2($x: 0, $y: 2px, $blur: 4px, $color: rgba(222, 122, 15, 0.5)) {
-    @return $x+px $y+px $blur+px $color;
-  }
+/// Genera una sombra de caja con un color específico
+/// @param {Length} $x - La posición horizontal de la sombra
+/// @param {Length} $y - La posición vertical de la sombra
+/// @param {Length} $blur - El desenfoque de la sombra
+/// @param {Color} $color - El color de la sombra
+/// @return {String} - La sombra de caja generada
+@function box-shadow2($x: 0, $y: 2px, $blur: 4px, $color: rgba(222, 122, 15, 0.5)) {
+  @return $x+px $y+px $blur+px $color;
+}
 
+/// Divide un número por 2
+/// @param {Number} $anchura - El número a dividir
+/// @return {Number} - El resultado de la división
 @function dividirAnchuraPor2($anchura) {
-    @return $anchura / 2;
+  @return $anchura / 2;
 }
