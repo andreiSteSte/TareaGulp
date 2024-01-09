@@ -1,6 +1,6 @@
 /// Añade 'px' a un número
 /// @param {Number} $tamaño - El numero al que se le añadirá 'px'
-/// @return {String} - El número con 'px' añadido
+/// @return {String} - El nr con 'px'
 @function añadeTamaño($tamaño){
   @return $tamaño+px;
 }
@@ -8,9 +8,9 @@
 /// Genera una sombra de caja
 /// @param {Length} $x - La posición horizontal de la sombra
 /// @param {Length} $y - La posición vertical de la sombra
-/// @param {Length} $blur - El desenfoque de la sombra
+/// @param {Length} $blur - El blur de la sombra
 /// @param {Color} $color - El color de la sombra
-/// @return {String} - La sombra de caja generada
+/// @return {String} - La sombra
 @function box-shadow($x: 0, $y: 2px, $blur: 4px, $color: rgba(0, 0, 0, 0.5)) {
   @return $x+px $y+px $blur+px $color;
 }
@@ -18,9 +18,9 @@
 /// Genera una sombra de caja con un color específico
 /// @param {Length} $x - La posición horizontal de la sombra
 /// @param {Length} $y - La posición vertical de la sombra
-/// @param {Length} $blur - El desenfoque de la sombra
+/// @param {Length} $blur - El blur
 /// @param {Color} $color - El color de la sombra
-/// @return {String} - La sombra de caja generada
+/// @return {String} - El valor de sombra
 @function box-shadow2($x: 0, $y: 2px, $blur: 4px, $color: rgba(222, 122, 15, 0.5)) {
   @return $x+px $y+px $blur+px $color;
 }
